@@ -6,8 +6,7 @@ const isFingerprintTypesValid = (fingerPrintInputString) => {
     let leftFingerArray = []
     
     // Converting the string into an array and storing them in separate arrays for the right finger(s) and the left finger(s)
-    // Sorting is done to make the check possible irrespective of the finger arrangements
-    fingerPrintInputString.split(",").sort((a,b) => a - b).map((item) => {
+    fingerPrintInputString.split(",").map((item) => {
         let num = parseInt(item)
         if (num <= 5) {
             // adding the difference to the right array to make it's values equal to the left array
